@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(
+      40deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(64, 64, 64, 0.7),
+      rgba(255, 255, 0, 0.5)
+    )
+    no-repeat;
+}
+
+h1 {
+  text-align: center;
+}
+
+.search-container {
+  max-width: 399px;
+  height: 15vh;
+  border: 1px solid black;
+  margin: 5px auto;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  min-height: 40px;
+}
+
+.search-bar {
+  margin-right: 5px;
+  outline: none;
+  border: transparent;
+  color: black;
+  font-size: 20px;
+  border-radius: 10px;
+  min-height: 30px;
+  /* background: transparent; */
+}
+
+.city,
+.temperature,
+.humidity,
+.wind {
+  width: 200px;
+  height: 200px;
+  border: 1px solid orange;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+  font-size: 30px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.weather-details-container {
+  border: 1px solid orange;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(
+    35deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(64, 64, 64, 0.8),
+    rgba(240, 128, 128, 0.8),
+    rgba(255, 160, 122, 0.9)
+  );
+  opacity: 0.8;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.search-container > button[type="submit"] {
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.heading {
+  text-align: center;
+}
+
+div.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.date {
+  margin: 5px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 20%;
+}
+
+@media only screen and (max-width: 792px) {
+  .weather-details-container {
+    display: block;
+  }
+
+  .city,
+  .temperature,
+  .humidity,
+  .wind {
+    width: auto;
+    height: 100px;
+  }
+
+  div.date {
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  html {
+    min-width: 450px;
+  }
+}
